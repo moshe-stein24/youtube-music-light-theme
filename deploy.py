@@ -8,7 +8,7 @@ import subprocess
 import sys
 
 # Configuration - UPDATED WITH YOUR VALUES
-GITHUB_USERNAME = "moshestein24"  
+GITHUB_USERNAME = "moshe-stein24"  
 YOUR_EMAIL = "moshestein24@gmail.com"  
 REPO_NAME = "youtube-music-light-theme"
 

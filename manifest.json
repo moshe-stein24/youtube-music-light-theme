@@ -3,8 +3,8 @@
   "name": "YouTube Music Light Theme",
   "version": "1.0",
   "description": "Applies a light theme to YouTube Music",
-  "homepage_url": "https://moshestein24.github.io/youtube-music-light-theme/",
-  "privacy_policy": "https://moshestein24.github.io/youtube-music-light-theme/privacy-policy.html",
+  "homepage_url": "https://moshe-stein24.github.io/youtube-music-light-theme/",
+  "privacy_policy": "https://moshe-stein24.github.io/youtube-music-light-theme/privacy-policy.html",
   "permissions": [
     "activeTab"
   ],
