@@ -67,7 +67,7 @@ def main():
         f'git config user.name "{GITHUB_USERNAME}"',
         'git commit -m "Initial commit"',
         "git branch -M main",
-        f"git remote add origin https://github.com/{GITHUB_USERNAME}/{REPO_NAME}.git",
+        f"git remote set-url origin https://github.com/{GITHUB_USERNAME}/{REPO_NAME}.git || git remote add origin https://github.com/{GITHUB_USERNAME}/{REPO_NAME}.git",
         "git push -u origin main"
     ]
     
