@@ -1,0 +1,135 @@
+/* YouTube Music Light Theme CSS */
+
+/* Force light theme variables - Apply to all states */
+html, 
+html[dark="false"], 
+html:not([dark="true"]),
+html.light,
+html:not(.dark) {
+    --yt-spec-base-background: #ffffff !important;
+    --yt-spec-raised-background: #ffffff !important;
+    --yt-spec-menu-background: #ffffff !important;
+    --yt-spec-inverted-background: #0f0f0f !important;
+    
+    --yt-spec-text-primary: #0f0f0f !important;
+    --yt-spec-text-secondary: #606060 !important;
+    --yt-spec-text-disabled: #909090 !important;
+    
+    --yt-spec-icon-inactive: #606060 !important;
+    --yt-spec-icon-active-other: #0f0f0f !important;
+    
+    --yt-spec-button-chip-background-hover: #f2f2f2 !important;
+    --yt-spec-touch-response: #00000011 !important;
+    
+    --yt-spec-outline: #e5e5e5 !important;
+    --yt-spec-10-percent-layer: #00000019 !important;
+    
+    --ytmusic-color-black1: #ffffff !important;
+    --ytmusic-color-black2: #f8f8f8 !important;
+    --ytmusic-color-black3: #f1f1f1 !important;
+    --ytmusic-color-black4: #e8e8e8 !important;
+    
+    --ytmusic-color-white1: #0f0f0f !important;
+    --ytmusic-color-white2: #272727 !important;
+    --ytmusic-color-white3: #3f3f3f !important;
+    --ytmusic-color-white4: #575757 !important;
+}
+
+/* Override any remaining dark elements */
+body.ytm-light-theme {
+    background-color: #ffffff !important;
+    color: #0f0f0f !important;
+}
+
+/* Navigation and sidebar */
+body.ytm-light-theme #nav,
+body.ytm-light-theme ytmusic-nav-bar,
+body.ytm-light-theme #guide {
+    background-color: #ffffff !important;
+}
+
+/* Player bar */
+body.ytm-light-theme #player-bar,
+body.ytm-light-theme ytmusic-player-bar {
+    background-color: #ffffff !important;
+    border-top: 1px solid #e5e5e5 !important;
+}
+
+/* Content areas */
+body.ytm-light-theme #contents,
+body.ytm-light-theme ytmusic-browse-response,
+body.ytm-light-theme ytmusic-section-list-renderer {
+    background-color: #ffffff !important;
+}
+
+/* Cards and items */
+body.ytm-light-theme ytmusic-responsive-list-item-renderer,
+body.ytm-light-theme ytmusic-list-item-renderer,
+body.ytm-light-theme .ytmusic-card {
+    background-color: #ffffff !important;
+}
+
+/* Search and input fields */
+body.ytm-light-theme #searchbox input,
+body.ytm-light-theme ytmusic-search-box input {
+    background-color: #f8f8f8 !important;
+    color: #0f0f0f !important;
+}
+
+/* Buttons */
+body.ytm-light-theme .yt-spec-button-shape-next--mono,
+body.ytm-light-theme .yt-spec-button-shape-next--tonal {
+    background-color: #f2f2f2 !important;
+    color: #0f0f0f !important;
+}
+
+/* Text elements */
+body.ytm-light-theme .yt-formatted-string,
+body.ytm-light-theme yt-formatted-string,
+body.ytm-light-theme .ytmusic-responsive-list-item-flex-column-item {
+    color: #0f0f0f !important;
+}
+
+/* Secondary text */
+body.ytm-light-theme .subtitle,
+body.ytm-light-theme .secondary-flex-columns {
+    color: #606060 !important;
+}
+
+/* Ensure icons are properly colored */
+body.ytm-light-theme .yt-icon {
+    color: #606060 !important;
+}
+
+body.ytm-light-theme .yt-icon.active {
+    color: #0f0f0f !important;
+}
+
+/* Additional aggressive overrides */
+* {
+    /* Override any dark theme CSS custom properties */
+    --yt-spec-general-background-a: #ffffff !important;
+    --yt-spec-general-background-b: #f8f8f8 !important;
+    --yt-spec-general-background-c: #f1f1f1 !important;
+    
+    --ytmusic-general-background-a: #ffffff !important;
+    --ytmusic-general-background-b: #f8f8f8 !important;
+    
+    --paper-grey-50: #ffffff !important;
+    --paper-grey-100: #f5f5f5 !important;
+    --paper-grey-200: #eeeeee !important;
+}
+
+/* Force override any remaining dark elements */
+[dark], [dark="true"], .dark {
+    background-color: #ffffff !important;
+    color: #0f0f0f !important;
+}
+
+/* Override YouTube's native dark theme detection */
+@media (prefers-color-scheme: dark) {
+    html, body {
+        background-color: #ffffff !important;
+        color: #0f0f0f !important;
+    }
+}

@@ -1,0 +1,37 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF0000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CC0000;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lightGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F0F0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="128" height="128" rx="20" fill="url(#bgGradient)"/>
+  
+  <!-- Light theme symbol (sun) -->
+  <circle cx="64" cy="64" r="35" fill="url(#lightGradient)" stroke="#FF0000" stroke-width="2"/>
+  <circle cx="64" cy="64" r="20" fill="#FFD700"/>
+  
+  <!-- Sun rays -->
+  <g stroke="#FFD700" stroke-width="3" stroke-linecap="round">
+    <line x1="64" y1="15" x2="64" y2="25"/>
+    <line x1="64" y1="103" x2="64" y2="113"/>
+    <line x1="15" y1="64" x2="25" y2="64"/>
+    <line x1="103" y1="64" x2="113" y2="64"/>
+    <line x1="27.5" y1="27.5" x2="34.5" y2="34.5"/>
+    <line x1="93.5" y1="93.5" x2="100.5" y2="100.5"/>
+    <line x1="27.5" y1="100.5" x2="34.5" y2="93.5"/>
+    <line x1="93.5" y1="34.5" x2="100.5" y2="27.5"/>
+  </g>
+  
+  <!-- Play button symbol -->
+  <polygon points="58,56 58,72 70,64" fill="#FF0000"/>
+  
+  <!-- Text -->
+  <text x="64" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">YTM Light</text>
+</svg>

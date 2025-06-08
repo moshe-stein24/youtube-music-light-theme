@@ -1,0 +1,28 @@
+# Development files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build/dist files (if any)
+.dist/
+build/
+dist/
+
+# Node modules (if you add any)
+node_modules/
+
+# Python cache (for your convert scripts)
+__pycache__/
+*.pyc
+*.pyo
+
+# Temporary files
+*.bak
+*.orig

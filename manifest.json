@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Music Light Theme",
+  "version": "1.0",
+  "description": "Applies a light theme to YouTube Music",
+  "homepage_url": "https://moshestein24.github.io/youtube-music-light-theme/",
+  "privacy_policy": "https://moshestein24.github.io/youtube-music-light-theme/privacy-policy.html",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://music.youtube.com/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Music Light Theme"
+  }
+}

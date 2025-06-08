@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG to PNG Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .icon-container {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .icon-preview {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 10px 0;
+        }
+        button {
+            background: #007cba;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #005a8b;
+        }
+        canvas {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>YouTube Music Extension Icon Converter</h1>
+    <p>This page will help you convert the SVG icons to PNG format for your Chrome extension.</p>
+    
+    <div class="icon-container">
+        <h3>16x16 Icon</h3>
+        <div class="icon-preview">
+            <img id="svg16" src="icon16.svg" width="16" height="16" alt="16x16 icon">
+            <button onclick="convertToPNG('svg16', 16, 'icon16.png')">Download PNG</button>
+        </div>
+        <canvas id="canvas16" width="16" height="16" style="display: none;"></canvas>
+    </div>
+    
+    <div class="icon-container">
+        <h3>48x48 Icon</h3>
+        <div class="icon-preview">
+            <img id="svg48" src="icon48.svg" width="48" height="48" alt="48x48 icon">
+            <button onclick="convertToPNG('svg48', 48, 'icon48.png')">Download PNG</button>
+        </div>
+        <canvas id="canvas48" width="48" height="48" style="display: none;"></canvas>
+    </div>
+    
+    <div class="icon-container">
+        <h3>128x128 Icon</h3>
+        <div class="icon-preview">
+            <img id="svg128" src="icon128.svg" width="128" height="128" alt="128x128 icon">
+            <button onclick="convertToPNG('svg128', 128, 'icon128.png')">Download PNG</button>
+        </div>
+        <canvas id="canvas128" width="128" height="128" style="display: none;"></canvas>
+    </div>
+
+    <div style="margin-top: 40px; padding: 20px; background: #f0f0f0; border-radius: 8px;">
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Click each "Download PNG" button to save the PNG versions</li>
+            <li>Save all three PNG files in your extension folder</li>
+            <li>Delete the SVG files and this HTML file (they're no longer needed)</li>
+            <li>Your extension is ready to install!</li>
+        </ol>
+    </div>
+
+    <script>
+        function convertToPNG(imgId, size, filename) {
+            const img = document.getElementById(imgId);
+            const canvas = document.getElementById('canvas' + size);
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Create a new image element for conversion
+            const tempImg = new Image();
+            tempImg.onload = function() {
+                // Draw the SVG to canvas
+                ctx.drawImage(tempImg, 0, 0, size, size);
+                
+                // Convert to PNG and download
+                canvas.toBlob(function(blob) {
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = filename;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                }, 'image/png');
+            };
+            
+            // Convert SVG to data URL
+            const svgData = img.src;
+            tempImg.src = svgData;
+        }
+    </script>
+</body>
+</html>
