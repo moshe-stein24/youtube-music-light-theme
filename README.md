@@ -10,7 +10,7 @@ A Chrome extension that applies a light theme to YouTube Music for a cleaner, br
 - **Privacy-First**: No data collection or tracking
 - **Simple**: No configuration needed
 
-## 📦 Installation
+/*## 📦 Installation
 
 ### From Chrome Web Store (Coming Soon)
 *Extension will be available on Chrome Web Store*
@@ -106,4 +106,4 @@ For questions or support, please contact: **moshestein24@gmail.com**
 
 ---
 
-**Made with ❤️ for YouTube Music users who prefer light themes**
+**Made with ❤️ for YouTube Music users who prefer light themes***/
