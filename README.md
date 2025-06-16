@@ -9,7 +9,7 @@ A Chrome extension that applies a light theme to YouTube Music for a cleaner, br
 - **Lightweight**: Minimal resource usage
 - **Privacy-First**: No data collection or tracking
 - **Simple**: No configuration needed
-
+You can buy me a coffee here: (https://ko-fi.com/moshestein)[https://ko-fi.com/moshestein]
 <!--/*## 📦 Installation
 
 ### From Chrome Web Store (Coming Soon)
